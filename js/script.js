@@ -39,6 +39,10 @@ var button = document.querySelector("button");
 var input = document.querySelector("input");
 var td =document.querySelectorAll("td");
 button.addEventListener("click",function(e){
+    function red(){
+        cell = document.querySelector('tr:nth-of-type('+y+') td:nth-of-type('+x+')');
+        cell.style.backgroundColor = 'red';
+    }
     var limit=input.value;
     var cell;
     //cell.style.backgroundColor
@@ -47,22 +51,19 @@ button.addEventListener("click",function(e){
     }
     for(var x=1; x < limit;x++){
         var y=1;
-        cell = document.querySelector('tr:nth-of-type('+y+') td:nth-of-type('+x+')');
-        cell.style.backgroundColor = 'red';
+        red();
     }
     for(var y=1; y < limit;y++){
-        cell = document.querySelector('tr:nth-of-type('+y+') td:nth-of-type('+x+')');
-        cell.style.backgroundColor = 'red';
+        red();
     }
     for(var x; x > 1 ;x--){
-        cell = document.querySelector('tr:nth-of-type('+y+') td:nth-of-type('+x+')');
-        cell.style.backgroundColor = 'red';
+        red();
     }
     
     for(var y; y > 1;y--){
-        cell = document.querySelector('tr:nth-of-type('+y+') td:nth-of-type('+x+')');
-        cell.style.backgroundColor = 'red';
+        red();
     }
+    })
 // var button = document.querySelector("button");
 // var input = document.querySelector("input");
 // var td =document.querySelectorAll("td");
@@ -123,5 +124,5 @@ button.addEventListener("click",function(e){
     //     }
         
     // }
-})
+// })
 //R=x++ D=Y++ L=x-- U=y--
